@@ -176,9 +176,12 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06;
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
-.nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-.nav-logo img { height: 70px; width: auto; transition: height 0.5s var(--ease); display: block; }
-.nav.scrolled .nav-logo img { height: 56px; }
+.nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; flex-shrink: 0; }
+.nav-logo img { height: 56px; width: auto; transition: height 0.5s var(--ease); display: block; }
+.nav.scrolled .nav-logo img { height: 46px; }
+.nav-logo .nl-text { display: flex; flex-direction: column; line-height: 1; white-space: nowrap; }
+.nav-logo .nl-name { font-family: var(--serif); font-size: 1.25rem; letter-spacing: 0.16em; color: var(--white); white-space: nowrap; }
+.nav-logo .nl-sub { font-family: var(--label); font-size: 0.55rem; letter-spacing: 0.42em; color: var(--gold); margin-top: 5px; }
 
 .nav-links { display: flex; align-items: center; gap: 28px; margin-left: auto; margin-right: auto; }
 .nav-links a {
@@ -1293,9 +1296,11 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06;
   .hero-actions { gap: 12px; }
   .hero-actions .btn { width: 100%; justify-content: center; padding: 14px 22px; font-size: 0.72rem; }
 
-  /* Logo nav: más chico en mobile */
-  .nav-logo img { height: 50px; }
-  .nav.scrolled .nav-logo img { height: 42px; }
+  /* Logo nav: ocultar subtítulo en mobile */
+  .nav-logo .nl-sub { display: none; }
+  .nav-logo .nl-name { font-size: 1.05rem; }
+  .nav-logo img { height: 42px; }
+  .nav.scrolled .nav-logo img { height: 36px; }
 
   /* Marquee */
   .marquee { padding: 14px 0; }
@@ -1373,7 +1378,8 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06;
 @media (max-width: 480px) {
   .footer-top { grid-template-columns: 1fr; }
   .hero-actions .btn { font-size: 0.68rem; padding: 13px 18px; }
-  .nav-logo img { height: 42px; }
+  .nav-logo .nl-name { font-size: 0.9rem; letter-spacing: 0.12em; }
+  .nav-logo img { height: 34px; }
   .catalog-filters { gap: 6px; }
   .cat-filter { font-size: 0.58rem; padding: 8px 10px; }
   .legal-page .legal-list .legal-item { padding-left: 50px; }
