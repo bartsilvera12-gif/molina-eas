@@ -1205,7 +1205,8 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06;
 
 /* Lista de especialidades (2 columnas) */
 .pass-specialties {
-  list-style: none; margin: 0 0 44px; padding: 0;
+  list-style: none; margin: 0 auto 44px; padding: 0;
+  max-width: 900px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px;
 }
 .pass-spec {
@@ -1218,8 +1219,8 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06;
 .pass-spec .ps-label { font-family: var(--serif); font-size: 1.22rem; color: var(--white); font-weight: 500; line-height: 1.25; }
 
 /* Nota + chips de regiones */
-.pass-note { max-width: 760px; color: var(--muted); font-weight: 300; line-height: 1.85; font-size: 1.04rem; margin-bottom: 22px; }
-.pass-regions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.pass-note { max-width: 760px; color: var(--muted); font-weight: 300; line-height: 1.85; font-size: 1.04rem; margin: 0 auto 22px; text-align: center; }
+.pass-regions { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 auto 30px; justify-content: center; }
 .pass-region {
   font-family: var(--label); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--gold-bright); border: 1px solid var(--line); background: rgba(255,255,255,0.015);
@@ -1245,6 +1246,8 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06;
 
 /* Panel de cumplimiento internacional */
 .pass-compliance {
+  max-width: 980px;
+  margin: 0 auto;
   border: 1px solid var(--line);
   background:
     radial-gradient(120% 130% at 100% 0%, rgba(201,164,73,0.06), transparent 50%),
@@ -1258,7 +1261,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06;
   font-family: var(--sans); font-weight: 300; color: var(--muted); font-size: 0.98rem; line-height: 1.6;
 }
 .pass-comply-list li svg { width: 19px; height: 19px; color: var(--gold); flex-shrink: 0; margin-top: 3px; }
-.pass-comply-foot { font-family: var(--sans); font-weight: 300; color: var(--muted); line-height: 1.85; font-size: 1.04rem; max-width: 780px; }
+.pass-comply-foot { font-family: var(--sans); font-weight: 300; color: var(--muted); line-height: 1.85; font-size: 1.04rem; max-width: 780px; margin: 0 auto; text-align: center; }
 
 @media (max-width: 980px) {
   .pass-grid { grid-template-columns: repeat(2, 1fr); }
